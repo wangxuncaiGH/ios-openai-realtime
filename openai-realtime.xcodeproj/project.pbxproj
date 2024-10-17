@@ -1,0 +1,398 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CC110FE92CC0B5580047CB40 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CC110FE82CC0B5580047CB40 /* Settings.bundle */; };
+		CC110FED2CC0B69F0047CB40 /* RealtimeGPTAssistant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC110FEC2CC0B69F0047CB40 /* RealtimeGPTAssistant.swift */; };
+		CCF7BEC92CBF758B007E015F /* openai_realtimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF7BEC82CBF758B007E015F /* openai_realtimeApp.swift */; };
+		CCF7BECB2CBF758B007E015F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF7BECA2CBF758B007E015F /* ContentView.swift */; };
+		CCF7BECD2CBF758C007E015F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCF7BECC2CBF758C007E015F /* Assets.xcassets */; };
+		CCF7BED02CBF758C007E015F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCF7BECF2CBF758C007E015F /* Preview Assets.xcassets */; };
+		CCF7BED82CBF75C7007E015F /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = CCF7BED72CBF75C7007E015F /* Starscream */; };
+		CCF7BEDA2CBF83C9007E015F /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF7BED92CBF83C9007E015F /* Models.swift */; };
+		CCF7BEDC2CC04305007E015F /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF7BEDB2CC04305007E015F /* AudioManager.swift */; };
+		CCF7BEDE2CC05912007E015F /* AVAudioPCMBuffer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF7BEDD2CC05912007E015F /* AVAudioPCMBuffer+Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CC110FE82CC0B5580047CB40 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		CC110FEC2CC0B69F0047CB40 /* RealtimeGPTAssistant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeGPTAssistant.swift; sourceTree = "<group>"; };
+		CCF7BEC52CBF758B007E015F /* openai-realtime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "openai-realtime.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCF7BEC82CBF758B007E015F /* openai_realtimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openai_realtimeApp.swift; sourceTree = "<group>"; };
+		CCF7BECA2CBF758B007E015F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CCF7BECC2CBF758C007E015F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CCF7BECF2CBF758C007E015F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CCF7BED92CBF83C9007E015F /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		CCF7BEDB2CC04305007E015F /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		CCF7BEDD2CC05912007E015F /* AVAudioPCMBuffer+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVAudioPCMBuffer+Extensions.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CCF7BEC22CBF758B007E015F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCF7BED82CBF75C7007E015F /* Starscream in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CCF7BEBC2CBF758B007E015F = {
+			isa = PBXGroup;
+			children = (
+				CCF7BEC72CBF758B007E015F /* openai-realtime */,
+				CCF7BEC62CBF758B007E015F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CCF7BEC62CBF758B007E015F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCF7BEC52CBF758B007E015F /* openai-realtime.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCF7BEC72CBF758B007E015F /* openai-realtime */ = {
+			isa = PBXGroup;
+			children = (
+				CC110FE82CC0B5580047CB40 /* Settings.bundle */,
+				CCF7BECC2CBF758C007E015F /* Assets.xcassets */,
+				CCF7BECE2CBF758C007E015F /* Preview Content */,
+				CCF7BEC82CBF758B007E015F /* openai_realtimeApp.swift */,
+				CCF7BECA2CBF758B007E015F /* ContentView.swift */,
+				CC110FEC2CC0B69F0047CB40 /* RealtimeGPTAssistant.swift */,
+				CCF7BED92CBF83C9007E015F /* Models.swift */,
+				CCF7BEDB2CC04305007E015F /* AudioManager.swift */,
+				CCF7BEDD2CC05912007E015F /* AVAudioPCMBuffer+Extensions.swift */,
+			);
+			path = "openai-realtime";
+			sourceTree = "<group>";
+		};
+		CCF7BECE2CBF758C007E015F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CCF7BECF2CBF758C007E015F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CCF7BEC42CBF758B007E015F /* openai-realtime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCF7BED32CBF758C007E015F /* Build configuration list for PBXNativeTarget "openai-realtime" */;
+			buildPhases = (
+				CCF7BEC12CBF758B007E015F /* Sources */,
+				CCF7BEC22CBF758B007E015F /* Frameworks */,
+				CCF7BEC32CBF758B007E015F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "openai-realtime";
+			packageProductDependencies = (
+				CCF7BED72CBF75C7007E015F /* Starscream */,
+			);
+			productName = "openai-realtime";
+			productReference = CCF7BEC52CBF758B007E015F /* openai-realtime.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CCF7BEBD2CBF758B007E015F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					CCF7BEC42CBF758B007E015F = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = CCF7BEC02CBF758B007E015F /* Build configuration list for PBXProject "openai-realtime" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CCF7BEBC2CBF758B007E015F;
+			packageReferences = (
+				CCF7BED62CBF75C7007E015F /* XCRemoteSwiftPackageReference "Starscream" */,
+			);
+			productRefGroup = CCF7BEC62CBF758B007E015F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCF7BEC42CBF758B007E015F /* openai-realtime */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CCF7BEC32CBF758B007E015F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCF7BED02CBF758C007E015F /* Preview Assets.xcassets in Resources */,
+				CC110FE92CC0B5580047CB40 /* Settings.bundle in Resources */,
+				CCF7BECD2CBF758C007E015F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCF7BEC12CBF758B007E015F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCF7BEDA2CBF83C9007E015F /* Models.swift in Sources */,
+				CCF7BECB2CBF758B007E015F /* ContentView.swift in Sources */,
+				CCF7BEDE2CC05912007E015F /* AVAudioPCMBuffer+Extensions.swift in Sources */,
+				CCF7BEDC2CC04305007E015F /* AudioManager.swift in Sources */,
+				CCF7BEC92CBF758B007E015F /* openai_realtimeApp.swift in Sources */,
+				CC110FED2CC0B69F0047CB40 /* RealtimeGPTAssistant.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CCF7BED12CBF758C007E015F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CCF7BED22CBF758C007E015F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CCF7BED42CBF758C007E015F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"openai-realtime/Preview Content\"";
+				DEVELOPMENT_TEAM = 7T2874S592;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Speech input.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cambrianmoment.openai-realtime";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CCF7BED52CBF758C007E015F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"openai-realtime/Preview Content\"";
+				DEVELOPMENT_TEAM = 7T2874S592;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Speech input.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cambrianmoment.openai-realtime";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CCF7BEC02CBF758B007E015F /* Build configuration list for PBXProject "openai-realtime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCF7BED12CBF758C007E015F /* Debug */,
+				CCF7BED22CBF758C007E015F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCF7BED32CBF758C007E015F /* Build configuration list for PBXNativeTarget "openai-realtime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCF7BED42CBF758C007E015F /* Debug */,
+				CCF7BED52CBF758C007E015F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CCF7BED62CBF75C7007E015F /* XCRemoteSwiftPackageReference "Starscream" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daltoniam/Starscream.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CCF7BED72CBF75C7007E015F /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCF7BED62CBF75C7007E015F /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CCF7BEBD2CBF758B007E015F /* Project object */;
+}
