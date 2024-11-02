@@ -131,9 +131,6 @@ extension RealtimeGPTAssistant: WebSocketDelegate {
 
             case .responseCreated:
                 print("Got response.created")
-
-                // Stop listening for microphone input until assistant is done responding
-                AudioManager.shared.stopRecording()
                 _isResponseInProgress = true
 
             case .responseDone(let responseDone):
@@ -183,15 +180,7 @@ extension RealtimeGPTAssistant: WebSocketDelegate {
             case .responseAudioDoneEvent:
                 guard let data = Data(base64Encoded: _receivedAudioBase64) else { break }
                 guard let buffer = AVAudioPCMBuffer.fromData(data, format: _outputFormat) else { break }
-//                AudioManager.shared.stopRecording()
-                AudioManager.shared.playSound(buffer: buffer, onFinished: { [weak self] in
-                    guard let self = self else { return }
-                    if !_isResponseInProgress && !AudioManager.shared.isPlaying {
-                        // If audio finished playing and assistant hasn't started another response,
-                        // it is safe to open the mic again
-                        AudioManager.shared.startRecording(onSamplesRecorded: onSamplesReceived)
-                    }
-                })
+                AudioManager.shared.playSound(buffer: buffer, onFinished: {})
                 _receivedAudioBase64 = ""
             }
 
