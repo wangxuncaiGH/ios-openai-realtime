@@ -31,7 +31,7 @@ class RealtimeGPTAssistant: ObservableObject {
         let url = URL(string: "wss://dashscope.aliyuncs.com/api-ws/v1/realtime?model=qwen-omni-turbo-realtime-2025-05-08")!
       //  let url = URL(string: "wss://dashscope.aliyuncs.com/api-ws/v1/realtime?model=qwen-omni-turbo-realtime")!
         var request = URLRequest(url: url)
-        request.addValue("Bearer \("sk-e95b0915d57044ccb28abe9033621ac2")", forHTTPHeaderField: "Authorization")
+        request.addValue("Bearer \("sk-your-bailiankey")", forHTTPHeaderField: "Authorization")
         request.addValue("gummy-realtime-v1", forHTTPHeaderField: "Content-Type")
         request.timeoutInterval = 60
         _socket = Starscream.WebSocket(request: request)
