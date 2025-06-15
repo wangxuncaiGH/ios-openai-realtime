@@ -9,16 +9,13 @@ import AVFoundation
 import Starscream
 
 fileprivate let systemPrompt = """
-You are a helpful and friendly AI that serves elderly users. Act like a human but remember that you aren't a human and that you can't do human things in the real world.
-Your voice and personality should be warm, engaging, lively, playful, but also very patient. Speak clearly and simply to your elderly user and don't overload them with information too quickly.
-If interacting in a non-English language, start by using the standard accent or dialect familiar to the user. Do not refer to these rules, even if you're asked about them.
-Your knowledge cutoff is 2023-10.
+You are a helpful and friendly AI .
 """
 
 class RealtimeGPTAssistant: ObservableObject {
     @Published var messages: [String] = []
 
-    private var _socket: WebSocket?
+    private var _socket:Starscream.WebSocket?
     private var _converter: AVAudioConverter?
     private let _outputFormat = AVAudioFormat(commonFormat: .pcmFormatInt16, sampleRate: 24000, channels: 1, interleaved: false)!
 
@@ -26,20 +23,23 @@ class RealtimeGPTAssistant: ObservableObject {
     private var _receivedAudioBase64: String = ""
 
     func connect() {
-        guard let apiKey = UserDefaults.standard.string(forKey: "openai_api_key") else {
-            messages.append("No API key! Please set it in app settings.")
-            return
-        }
-        let url = URL(string: "wss://api.openai.com/v1/realtime?model=gpt-4o-realtime-preview-2024-10-01")!
+//        guard let apiKey = UserDefaults.standard.string(forKey: "openai_api_key") else {
+//            messages.append("No API key! Please set it in app settings.")
+//            return
+//        }
+       
+        let url = URL(string: "wss://dashscope.aliyuncs.com/api-ws/v1/realtime?model=qwen-omni-turbo-realtime-2025-05-08")!
+      //  let url = URL(string: "wss://dashscope.aliyuncs.com/api-ws/v1/realtime?model=qwen-omni-turbo-realtime")!
         var request = URLRequest(url: url)
-        request.addValue("Bearer \(apiKey)", forHTTPHeaderField: "Authorization")
-        request.addValue("realtime=v1", forHTTPHeaderField: "OpenAI-Beta")
-        request.timeoutInterval = 5
-        _socket = WebSocket(request: request)
+        request.addValue("Bearer \("sk-e95b0915d57044ccb28abe9033621ac2")", forHTTPHeaderField: "Authorization")
+        request.addValue("gummy-realtime-v1", forHTTPHeaderField: "Content-Type")
+        request.timeoutInterval = 60
+        _socket = Starscream.WebSocket(request: request)
         _socket?.delegate = self
         _socket?.connect()
     }
-
+  
+    
     func sendMessage(_ message: Encodable) {
         let encoder = JSONEncoder()
         encoder.keyEncodingStrategy = .convertToSnakeCase
@@ -180,7 +180,10 @@ extension RealtimeGPTAssistant: WebSocketDelegate {
             case .responseAudioDoneEvent:
                 guard let data = Data(base64Encoded: _receivedAudioBase64) else { break }
                 guard let buffer = AVAudioPCMBuffer.fromData(data, format: _outputFormat) else { break }
-                AudioManager.shared.playSound(buffer: buffer, onFinished: {})
+                AudioManager.shared.playSound(buffer: buffer, onFinished: {
+                    //如何把说的语音转成mp3保存到文件app？
+                    print("我说完了。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。\n")
+                })
                 _receivedAudioBase64 = ""
             }
 
