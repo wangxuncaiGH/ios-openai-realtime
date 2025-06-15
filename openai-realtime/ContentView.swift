@@ -12,12 +12,32 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Button("Connect to Assistant") {
-                _assistant.connect()
-            }
+           
             List(Array(_assistant.messages.enumerated()), id: \.offset) { index, message in
                 Text(message)
             }
+        }
+        .overlay(alignment: .bottom) {
+            HStack{
+                
+              
+                Spacer()
+               
+                Button {
+                    _assistant.connect()
+                } label: {
+                    Label {
+                        Text("聊天")
+                    } icon: {
+                        Image(systemName: "message")
+                    }
+                    
+
+                }
+
+                Spacer()
+            }
+            .padding()
         }
     }
 
